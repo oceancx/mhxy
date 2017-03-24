@@ -1,0 +1,17 @@
+/Users/oceancx/mhxy/scene/1501.map
+/Users/oceancx/mhxy/shape.wdf 3EAE6B97 199CF19E
+/Users/oceancx/mhxy/shape.wd3 DA6126C5 2D70D93E
+
+#EEB4814C
+#4FBA48B8
+#http://coolshell.cn/articles/8990.html
+#59207938=武器\剑_剑侠客_行走
+#29DF2153=武器\剑_剑侠客_行走
+#2980D884=武器\剑_剑侠客_行走
+
+#3EAE6B97=人物\巨魔王_行走
+#54F3FC94=人物\剑侠客_行走 
+
+#B5BEE359=武器\斧钺_巨魔王_行走
+#9FBAAD0D=武器\斧钺_巨魔王_行走
+#3C85094B=武器\斧钺_巨魔王_行走

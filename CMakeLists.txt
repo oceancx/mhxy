@@ -1,0 +1,17 @@
+# CMake entry point
+cmake_minimum_required (VERSION 3.1)
+project (mhxy)
+
+set(CMAKE_INSTALL_PREFIX ${PROJECT_BINARY_DIR}/install)
+add_definitions(
+	-std=c++11
+	-DTW_STATIC
+	-DTW_NO_LIB_PRAGMA
+	-DTW_NO_DIRECT3D
+	-DGLEW_STATIC
+	-D_CRT_SECURE_NO_WARNINGS
+)
+
+ADD_SUBDIRECTORY(src bin)
+
+INSTALL(FILES COPYRIGHT README DESTINATION ${CMAKE_INSTALL_PREFIX})
