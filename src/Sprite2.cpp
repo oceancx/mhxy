@@ -17,34 +17,34 @@ Sprite2::~Sprite2()
 
 void Sprite2::SaveImage(int index)
 {
-	TGA_FILE_HEADER TgaHeader;
-	memset(&TgaHeader, 0, 18);
-	TgaHeader.IdLength = 0;			// Í¼ÏñĞÅÏ¢×Ö¶Î(Ä¬ÈÏ:0)
-	TgaHeader.ColorMapType = 0;		// ÑÕÉ«±êµÄÀàĞÍ(Ä¬ÈÏ0)
-	TgaHeader.ImageType = 0x02;			// Í¼ÏñÀàĞÍÂë(Ö§³Ö2»ò10)
-	TgaHeader.ColorMapFirstIndex = 0;	// ÑÕÉ«±íµÄÒıË÷(Ä¬ÈÏ:0)
-	TgaHeader.ColorMapLength = 0;		// ÑÕÉ«±íµÄ³¤¶È(Ä¬ÈÏ:0)
-	TgaHeader.ColorMapEntrySize = 0;	// ÑÕÉ«±í±íÏîµÄÎªÊı(Ä¬ÈÏ:0£¬Ö§³Ö16/24/32)
-	TgaHeader.XOrigin = 0;				// Í¼ÏñX×ø±êµÄÆğÊ¼Î»ÖÃ(Ä¬ÈÏ:0)
-	TgaHeader.YOrigin = 0;				// Í¼ÏñY×ø±êµÄÆğÊ¼Î»ÖÃ(Ä¬ÈÏ:0)
-	TgaHeader.ImageWidth = mWidth;			// Í¼ÏñµÄ¿í¶È
-	TgaHeader.ImageHeight = mHeight;			// Í¼ÏñµÄ¸ß¶È
-	TgaHeader.PixelDepth = 32;			// Í¼ÏñÃ¿ÏñËØ´æ´¢Õ¼ÓÃÎ»Êı
-	TgaHeader.ImageDescruptor = 8;		// Í¼ÏñÃèÊö×Ö·û×Ö½Ú(Ä¬ÈÏ:0)
+    TGA_FILE_HEADER TgaHeader;
+    memset(&TgaHeader, 0, 18);
+    TgaHeader.IdLength = 0;			// å›¾åƒä¿¡æ¯å­—æ®µ(é»˜è®¤:0)
+    TgaHeader.ColorMapType = 0;		// é¢œè‰²æ ‡çš„ç±»å‹(é»˜è®¤0)
+    TgaHeader.ImageType = 0x02;			// å›¾åƒç±»å‹ç (æ”¯æŒ2æˆ–10)
+    TgaHeader.ColorMapFirstIndex = 0;	// é¢œè‰²è¡¨çš„å¼•ç´¢(é»˜è®¤:0)
+    TgaHeader.ColorMapLength = 0;		// é¢œè‰²è¡¨çš„é•¿åº¦(é»˜è®¤:0)
+    TgaHeader.ColorMapEntrySize = 0;	// é¢œè‰²è¡¨è¡¨é¡¹çš„ä¸ºæ•°(é»˜è®¤:0ï¼Œæ”¯æŒ16/24/32)
+    TgaHeader.XOrigin = 0;				// å›¾åƒXåæ ‡çš„èµ·å§‹ä½ç½®(é»˜è®¤:0)
+    TgaHeader.YOrigin = 0;				// å›¾åƒYåæ ‡çš„èµ·å§‹ä½ç½®(é»˜è®¤:0)
+    TgaHeader.ImageWidth = mWidth;			// å›¾åƒçš„å®½åº¦
+    TgaHeader.ImageHeight = mHeight;			// å›¾åƒçš„é«˜åº¦
+    TgaHeader.PixelDepth = 32;			// å›¾åƒæ¯åƒç´ å­˜å‚¨å ç”¨ä½æ•°
+    TgaHeader.ImageDescruptor = 8;		// å›¾åƒæè¿°å­—ç¬¦å­—èŠ‚(é»˜è®¤:0)
 
-	char outfilename[50];
-	int gpos = index / mFrameSize;
-	int cpos = index%mFrameSize;
-	
-	sprintf(outfilename, "mhxy%d_%d.tga", gpos, cpos);
-	printf("%s\n", outfilename);
-	
-	ofstream ofile;
-	ofile.open(outfilename, ios::out | ios::trunc | ios::binary);
-	//cout << "Ğ´TGAÍ¼ÏñÎÄ¼şÍ·" << endl;
-	ofile.write((char*)(&TgaHeader), sizeof(TGA_FILE_HEADER)); // Ğ´TGAµÄÎÄ¼şÍ·
-															   //cout << "Í¼ÏñÎÄ¼şÍ·Ğ´Íê³É£¬¿ªÊ¼Ğ´Í¼ÏñÊı¾İ¡£" << endl;
-	ofile.write((char*)mFrames[gpos][cpos].src, mWidth*mHeight * 4);
-	cout << "Íê³É " << outfilename << " Ö¡Í¼Æ¬Êä³ö~" << endl;
-	ofile.close();
+    char outfilename[50];
+    int gpos = index / mFrameSize;
+    int cpos = index%mFrameSize;
+
+    sprintf(outfilename, "mhxy%d_%d.tga", gpos, cpos);
+    printf("%s\n", outfilename);
+
+    ofstream ofile;
+    ofile.open(outfilename, ios::out | ios::trunc | ios::binary);
+    //cout << "å†™TGAå›¾åƒæ–‡ä»¶å¤´" << endl;
+    ofile.write((char*)(&TgaHeader), sizeof(TGA_FILE_HEADER)); // å†™TGAçš„æ–‡ä»¶å¤´
+    //cout << "å›¾åƒæ–‡ä»¶å¤´å†™å®Œæˆï¼Œå¼€å§‹å†™å›¾åƒæ•°æ®ã€‚" << endl;
+    ofile.write((char*)mFrames[gpos][cpos].src, mWidth*mHeight * 4);
+    cout << "å®Œæˆ " << outfilename << " å¸§å›¾ç‰‡è¾“å‡º~" << endl;
+    ofile.close();
 }

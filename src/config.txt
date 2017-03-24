@@ -1,17 +1,17 @@
-/Users/oceancx/mhxy/scene/1501.map
-/Users/oceancx/mhxy/shape.wdf 3EAE6B97 199CF19E
-/Users/oceancx/mhxy/shape.wd3 DA6126C5 2D70D93E
+/Users/oceancx/mhxy_official/scene/1501.map
+/Users/oceancx/mhxy_official/shape.wdf 3EAE6B97 199CF19E
+/Users/oceancx/mhxy_official/shape.wd3 DA6126C5 2D70D93E
 
 #EEB4814C
 #4FBA48B8
 #http://coolshell.cn/articles/8990.html
-#59207938=武器\剑_剑侠客_行走
-#29DF2153=武器\剑_剑侠客_行走
-#2980D884=武器\剑_剑侠客_行走
+#59207938=姝﹀櫒\鍓慱鍓戜緺瀹琛岃蛋
+#29DF2153=姝﹀櫒\鍓慱鍓戜緺瀹琛岃蛋
+#2980D884=姝﹀櫒\鍓慱鍓戜緺瀹琛岃蛋
 
-#3EAE6B97=人物\巨魔王_行走
-#54F3FC94=人物\剑侠客_行走 
+#3EAE6B97=浜虹墿\宸ㄩ瓟鐜媉琛岃蛋
+#54F3FC94=浜虹墿\鍓戜緺瀹琛岃蛋 
 
-#B5BEE359=武器\斧钺_巨魔王_行走
-#9FBAAD0D=武器\斧钺_巨魔王_行走
-#3C85094B=武器\斧钺_巨魔王_行走
+#B5BEE359=姝﹀櫒\鏂ч捄_宸ㄩ瓟鐜媉琛岃蛋 
+#9FBAAD0D=姝﹀櫒\鏂ч捄_宸ㄩ瓟鐜媉琛岃蛋
+#3C85094B=姝﹀櫒\鏂ч捄_宸ㄩ瓟鐜媉琛岃蛋
